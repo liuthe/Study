@@ -157,4 +157,18 @@ It's important to clarify the monifold we are dealing with. Before introducing t
 
 ### 6. Calculation in CFT
 
-There is 
+Considering a complex plane, whose complex coordinate is $w=x+i\tau$, we perform a comformal mapping $z\to \left [\frac{w-u}{w-v} \right ]^{\frac{1}{n}}$. This transformation maps $u$ to original point, $v$ to infinity, and folds the Riemann surface into a complex plane.
+
+In CFT, the transformation of a stress tensor is
+
+$$
+T(w)=(\frac{dz}{dw})^2T(z)+\frac{c}{12}\{z,w\},
+$$
+
+where $\{z,w\}=(z^{\prime\prime\prime}z^\prime-\frac{3}{2}z^{\prime\prime})/{z^{\prime}}^2$ is the Schwarzian derivative.
+
+Taking the expectation value on boh sides, and using $\langle T(z)\rangle_C=0$, we could get
+$$
+\langle T(z)\rangle_{\mathcal{R}_{n,1}}=\frac{c}{12}\{z,w\}=\frac{c(1-n^{-2})}{24}\frac{(v-u)^2}{(w-u)^2(w-v)^2}.
+$$
+
