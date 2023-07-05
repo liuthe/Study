@@ -172,3 +172,62 @@ $$
 \langle T(z)\rangle_{\mathcal{R}_{n,1}}=\frac{c}{12}\{z,w\}=\frac{c(1-n^{-2})}{24}\frac{(v-u)^2}{(w-u)^2(w-v)^2}.
 $$
 
+From above, this is equal to 
+
+$$
+\frac{\langle T_n(u)\tilde{T}_n(v)T(z)\rangle_C}{\langle T_n(u)\tilde{T}_n(v) \rangle_C}.
+$$
+
+Using conformal Ward identity, we get
+
+$$
+\langle T_n(u)\tilde{T}_n(v)T(z)\rangle_C=(\frac{1}{w-u}\frac{\partial}{\partial u}+\frac{h_{T_n}}{(w-u)^2} +\frac{1}{w-v}\frac{\partial}{\partial v}+\frac{h_{\tilde{T}_n}}{(w-v)^2})\langle T_n(u)\tilde{T}_n(v) \rangle_C.
+$$
+
+Suppose $\langle T_n(u)\tilde{T}_n(v) \rangle_C\propto |u-v|^{-2\Delta_n}$. Put it into the formula above, and comparing with the $\langle T(z)\rangle_{\mathcal{R}_{n,1}}$, we get
+
+$$
+\begin{aligned}
+     & \frac{c(1-n^{-2})}{24}\frac{(v-u)^2}{(w-u)^2(w-v)^2}\\
+    =& \frac{-\Delta_n}{(w-u)(u-v)}+\frac{\Delta_n}{(w-v)(u-v)}+\frac{h_n}{(w-u)^2}+\frac{\bar{h}_n}{(w-v)^2}\\
+    =& \frac{\Delta_n(u-v)}{(w-u)(w-v)(u-v)}+\frac{h_n}{(w-u)^2}+\frac{\bar{h}_n}{(w-v)^2}\\
+    =& \frac{\Delta_n(w-v)(w-u)+h_n(w-v)^2+\bar{h}_n(w-u)^2}{(w-u)^2(w-v)^2}\\
+    &\text{Let}\ \Delta_n=2h_n=2\bar{h}_n.\\
+    =& h_n\frac{\left [ (w-v)-(w-u)\right ]^2}{(w-u)^2(w-v)^2}= h_n\frac{(u-v)^2}{(w-u)^2(w-v)^2}.\\
+\end{aligned}
+$$
+
+So,
+
+$$
+\begin{aligned}
+    \Delta_n =& \frac{c(1-n^{-2})}{12}\\
+    Z_n(A) \propto & |u-v|^{-\frac{c(n^2-1)}{6n}}.
+\end{aligned}
+$$
+
+We could expect that,
+
+$$
+\mathrm{Tr}\rho_A^n=c_n \left (\frac{v-u}{a}\right)^{-c(n-1/n)/6},
+$$
+
+where $a$ is the cut-off, $c_n$ is a constant which could not be determined here, but $c_1$ should be 0.
+
+Take it into the Rényi entropy formula:
+
+$$S_A^{(n)}=\frac{-c(n-1/n)\log((v-u)/a)}{6(1-n)}+c_n^\prime,$$
+
+where $c_n^\prime\equiv\frac{\log c_n}{1-n}$.
+
+When $n$ approaches 1, we get
+
+$$S_A = \frac{c}{3}\log(\frac{v-u}{a})+c_1^\prime.$$
+
+## 2. Introduction to conformal field theory
+
+### 2.1. Conformal transformations
+
+### 2.2. Primary fields and its OPE
+
+### 2.3. Stress tensor and its OPE
