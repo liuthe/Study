@@ -49,7 +49,7 @@ under the condition of $\phi_0=\phi_N$ for bosonic fields.
  \end{aligned}
 $$
  
-where the states $\otimes |\{\phi_x\}\rangle = |\prod_x\{\phi_x\}\rangle$ form a basis.  
+where the states $\otimes |\{\phi_x\}\rangle = |\prod_x\{\phi_x\}\rangle$ form a basis. The following diagram is a graph description of the reduced density matrix.
 
 ![Density](density.png)
 
@@ -226,8 +226,87 @@ $$S_A = \frac{c}{3}\log(\frac{v-u}{a})+c_1^\prime.$$
 
 ## 2. Introduction to conformal field theory
 
+A conformal field theory(CFT) is a field theory which is invariant under conformal transformations. 
+
 ### 2.1. Conformal transformations
 
-### 2.2. Primary fields and its OPE
+Considering a line element
+$ds^2=g_{\mu\nu}dx^\mu dx^\nu$, $g_{\mu\nu}(x)\to g_{\mu\nu}^\prime(x^\prime)=\frac{\partial x^\alpha}{\partial x^{\prime\mu}}\frac{\partial x^\beta}{\partial x^{\prime\nu}}g_{\alpha\beta}(x)$ under the transformation of $x\to x^\prime$.
 
+A conformal tranformation of coordinates is an invertible mapping $x \to x^\prime$, leaving the metric tensor invariant up to a scale:
+
+$$g^\prime_{\mu\nu}(x^\prime)=\Lambda(x)g_{\mu\nu}(x).$$
+
+Why we call it conformal? You will find that this constraints keeps the angle($vw/(v^2w^2)^{1/2}$) between the vectors $v$ and $w$, where $vw = g_{\mu\nu}v^\mu w^\nu$.
+
+If we considering the infinitesimal coordinate transformation $x^\mu\to x^\mu+\epsilon^\mu$, the line element changes as 
+
+$$
+\begin{aligned}
+    ds^2\to& (dx^\mu+d\epsilon^\mu)g_{\mu\nu}(dx^\nu+d\epsilon^\nu)\\
+    =&ds^2+d\epsilon_\nu dx^\nu+d\epsilon_\mu dx^\mu\\
+    =&ds^2+d\epsilon_\nu dx^\nu+d\epsilon_\mu dx^\mu\\
+    =&ds^2+\partial_\mu\epsilon_\nu dx^\mu dx^\nu+\partial_\nu\epsilon_\mu dx^\nu dx^\mu\\
+    =&ds^2+(\partial_\mu\epsilon_\nu+\partial_\nu\epsilon_\mu )dx^\mu dx^\nu\\
+\end{aligned}
+$$
+
+We need the second part to be proportinal to $g_{\mu\nu}$, so
+
+$$(\partial_\mu\epsilon_\nu+\partial_\nu\epsilon_\mu )=f(x)g_{\mu\nu}.$$
+
+Contract the stress tensor by multiplying $g^{\mu\nu}$:
+
+$$
+\begin{aligned}
+    g^{\mu\nu}(\partial_\mu\epsilon_\nu+\partial_\nu\epsilon_\mu )&=f(x)g_{\mu\nu}g^{\mu\nu}\\
+    (\partial_\mu\epsilon^\mu+\partial_\mu\epsilon^\mu )&=f(x)d\\
+    f(x)=&\frac{2}{d}(\partial_\mu  \epsilon^\mu)\\
+    (\partial_\mu\epsilon_\nu+\partial_\nu\epsilon_\mu )=&\frac{2}{d}(\partial_\mu  \epsilon^\mu)g_{\mu\nu}.\\
+\end{aligned}
+$$
+
+If taking derivative on both side, we will find the third derivative of $\epsilon$ is 0, this directly(may be not that directly) produces the conformal group for $d>2$.
+
+Here, we only care about the case when $d=2$ and $g_{\mu\nu}=\delta_{\mu\nu}$.
+
+The constraints now becomes
+
+$$
+\begin{aligned}
+    \partial_1\epsilon_1=&\partial_2 \epsilon_2\\
+    \partial_1\epsilon_2=&-\partial_2 \epsilon_1.\\
+\end{aligned}
+$$
+
+This is exactly the Cauchy-Riemann equation. It's then natually to use complex coordinates, and the infinitesimal tramsformation is analytic around $x$.
+
+Suppose the 2-D coordinate conformal transformations is 
+
+$$
+z\to f(z),\quad \bar{z}\to\bar{f}(\bar{z}),
+$$
+
+then the line element is
+
+$$ds^2=dzd\bar{z}\to \left | \frac{\partial f}{\partial z}\right |^2dzd\bar{z}.$$
+
+We could find a basis for the transformations, the corresponding infinitesinal generators are verified to satisfy the Witt algebra. 
+
+In the quantum case, the algebra will be "central extended" to Virasoro algebra, it will get a new constant term proportional to the so-called central charge c.
+
+However, the algebra above is called local conformal algebra, because it may not be well defined and invertible goblally on Riemann sphere $S^2$. Take that into consideration, we will find the allowed global transformation is 
+
+$$
+z\to \frac{az+b}{cz+d},\quad \bar{z}\to \frac{\bar{a}\bar{z}+\bar{b}}{\bar{c}\bar{z}+\bar{d}}.
+$$
+ composition of transformation corresponding to matrix transformation 
+
+### 2.2. Primary fields and its OPE
+Deifine a theory with conformal invariance to satisfy some straight for ward properties:
+
+
+By translational invariance, N-point functions only depend on $x_i-x_j$, by rotational invariance the, they only depend on $|x_i-x_j|$, by special conformal transformation, cross ratio is invariant 
 ### 2.3. Stress tensor and its OPE
+
+
